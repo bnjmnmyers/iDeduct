@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52F6039F1A98D8F800435529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6039E1A98D8F800435529 /* AppDelegate.swift */; };
+		52F603A21A98D8F800435529 /* iDeduct.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52F603A01A98D8F800435529 /* iDeduct.xcdatamodeld */; };
+		52F603A41A98D8F800435529 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F603A31A98D8F800435529 /* ViewController.swift */; };
+		52F603A71A98D8F800435529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F603A51A98D8F800435529 /* Main.storyboard */; };
+		52F603A91A98D8F800435529 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F603A81A98D8F800435529 /* Images.xcassets */; };
+		52F603AC1A98D8F800435529 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F603AA1A98D8F800435529 /* LaunchScreen.xib */; };
+		52F603B81A98D8F800435529 /* iDeductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F603B71A98D8F800435529 /* iDeductTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52F603B21A98D8F800435529 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F603911A98D8F800435529 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52F603981A98D8F800435529;
+			remoteInfo = iDeduct;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52F603991A98D8F800435529 /* iDeduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDeduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F6039D1A98D8F800435529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52F6039E1A98D8F800435529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52F603A11A98D8F800435529 /* iDeduct.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iDeduct.xcdatamodel; sourceTree = "<group>"; };
+		52F603A31A98D8F800435529 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52F603A61A98D8F800435529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52F603A81A98D8F800435529 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		52F603AB1A98D8F800435529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		52F603B11A98D8F800435529 /* iDeductTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDeductTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F603B61A98D8F800435529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52F603B71A98D8F800435529 /* iDeductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDeductTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52F603961A98D8F800435529 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52F603AE1A98D8F800435529 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52F603901A98D8F800435529 = {
+			isa = PBXGroup;
+			children = (
+				52F6039B1A98D8F800435529 /* iDeduct */,
+				52F603B41A98D8F800435529 /* iDeductTests */,
+				52F6039A1A98D8F800435529 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52F6039A1A98D8F800435529 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52F603991A98D8F800435529 /* iDeduct.app */,
+				52F603B11A98D8F800435529 /* iDeductTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52F6039B1A98D8F800435529 /* iDeduct */ = {
+			isa = PBXGroup;
+			children = (
+				52F6039E1A98D8F800435529 /* AppDelegate.swift */,
+				52F603A31A98D8F800435529 /* ViewController.swift */,
+				52F603A51A98D8F800435529 /* Main.storyboard */,
+				52F603A81A98D8F800435529 /* Images.xcassets */,
+				52F603AA1A98D8F800435529 /* LaunchScreen.xib */,
+				52F603A01A98D8F800435529 /* iDeduct.xcdatamodeld */,
+				52F6039C1A98D8F800435529 /* Supporting Files */,
+			);
+			path = iDeduct;
+			sourceTree = "<group>";
+		};
+		52F6039C1A98D8F800435529 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52F6039D1A98D8F800435529 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52F603B41A98D8F800435529 /* iDeductTests */ = {
+			isa = PBXGroup;
+			children = (
+				52F603B71A98D8F800435529 /* iDeductTests.swift */,
+				52F603B51A98D8F800435529 /* Supporting Files */,
+			);
+			path = iDeductTests;
+			sourceTree = "<group>";
+		};
+		52F603B51A98D8F800435529 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52F603B61A98D8F800435529 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52F603981A98D8F800435529 /* iDeduct */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52F603BB1A98D8F800435529 /* Build configuration list for PBXNativeTarget "iDeduct" */;
+			buildPhases = (
+				52F603951A98D8F800435529 /* Sources */,
+				52F603961A98D8F800435529 /* Frameworks */,
+				52F603971A98D8F800435529 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iDeduct;
+			productName = iDeduct;
+			productReference = 52F603991A98D8F800435529 /* iDeduct.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52F603B01A98D8F800435529 /* iDeductTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52F603BE1A98D8F800435529 /* Build configuration list for PBXNativeTarget "iDeductTests" */;
+			buildPhases = (
+				52F603AD1A98D8F800435529 /* Sources */,
+				52F603AE1A98D8F800435529 /* Frameworks */,
+				52F603AF1A98D8F800435529 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52F603B31A98D8F800435529 /* PBXTargetDependency */,
+			);
+			name = iDeductTests;
+			productName = iDeductTests;
+			productReference = 52F603B11A98D8F800435529 /* iDeductTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52F603911A98D8F800435529 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = AppGuys;
+				TargetAttributes = {
+					52F603981A98D8F800435529 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					52F603B01A98D8F800435529 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 52F603981A98D8F800435529;
+					};
+				};
+			};
+			buildConfigurationList = 52F603941A98D8F800435529 /* Build configuration list for PBXProject "iDeduct" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52F603901A98D8F800435529;
+			productRefGroup = 52F6039A1A98D8F800435529 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52F603981A98D8F800435529 /* iDeduct */,
+				52F603B01A98D8F800435529 /* iDeductTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52F603971A98D8F800435529 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F603A71A98D8F800435529 /* Main.storyboard in Resources */,
+				52F603AC1A98D8F800435529 /* LaunchScreen.xib in Resources */,
+				52F603A91A98D8F800435529 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52F603AF1A98D8F800435529 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52F603951A98D8F800435529 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F603A41A98D8F800435529 /* ViewController.swift in Sources */,
+				52F603A21A98D8F800435529 /* iDeduct.xcdatamodeld in Sources */,
+				52F6039F1A98D8F800435529 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52F603AD1A98D8F800435529 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F603B81A98D8F800435529 /* iDeductTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52F603B31A98D8F800435529 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52F603981A98D8F800435529 /* iDeduct */;
+			targetProxy = 52F603B21A98D8F800435529 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52F603A51A98D8F800435529 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52F603A61A98D8F800435529 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52F603AA1A98D8F800435529 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52F603AB1A98D8F800435529 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52F603B91A98D8F800435529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52F603BA1A98D8F800435529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52F603BC1A98D8F800435529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iDeduct/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52F603BD1A98D8F800435529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iDeduct/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		52F603BF1A98D8F800435529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iDeductTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iDeduct.app/iDeduct";
+			};
+			name = Debug;
+		};
+		52F603C01A98D8F800435529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iDeductTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iDeduct.app/iDeduct";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52F603941A98D8F800435529 /* Build configuration list for PBXProject "iDeduct" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52F603B91A98D8F800435529 /* Debug */,
+				52F603BA1A98D8F800435529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52F603BB1A98D8F800435529 /* Build configuration list for PBXNativeTarget "iDeduct" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52F603BC1A98D8F800435529 /* Debug */,
+				52F603BD1A98D8F800435529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52F603BE1A98D8F800435529 /* Build configuration list for PBXNativeTarget "iDeductTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52F603BF1A98D8F800435529 /* Debug */,
+				52F603C01A98D8F800435529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		52F603A01A98D8F800435529 /* iDeduct.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				52F603A11A98D8F800435529 /* iDeduct.xcdatamodel */,
+			);
+			currentVersion = 52F603A11A98D8F800435529 /* iDeduct.xcdatamodel */;
+			path = iDeduct.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 52F603911A98D8F800435529 /* Project object */;
+}
