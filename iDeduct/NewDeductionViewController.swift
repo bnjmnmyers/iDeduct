@@ -19,11 +19,16 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var itemNameTF: UITextField!
     @IBOutlet weak var priceTF: UITextField!
     @IBOutlet weak var setDateBTN: UIButton!
+    @IBOutlet weak var selectCategoryBTN: UIButton!
+    
+    @IBOutlet weak var categoryPickerContainer: UIView!
+    @IBOutlet weak var categoryPicker: UIPickerView!
+    @IBOutlet weak var categoryPickerDone: UIButton!
     
     // Variable Properties
     //
     var currentTextField: UITextField!
-    
+    let categories = ["Music", "Electronics", "Software", "Travel", "Dancewear"]
     
     // Functions
     //
@@ -37,11 +42,23 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        currentTextField.endEditing(true)
+        if currentTextField != nil{
+            currentTextField.endEditing(true)
+        }
     }
     
     @IBAction func setDate(sender: AnyObject) {
         datePickerContainer.hidden = false
+        if currentTextField != nil{
+            currentTextField.endEditing(true)
+        }
+    }
+    
+    @IBAction func selectCategory(sender: AnyObject) {
+        categoryPickerContainer.hidden = false
+        if currentTextField != nil{
+            currentTextField.endEditing(true)
+        }
     }
     
     @IBAction func closeDatePicker(sender: AnyObject) {
@@ -51,5 +68,30 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
         
         var stringDate = dateFormatter.stringFromDate(datePicker.date)
         setDateBTN.titleLabel?.text = stringDate
+    }
+    
+    @IBAction func closeCategoryPicker(sender: AnyObject) {
+        categoryPickerContainer.hidden = true
+    }
+    
+    // MARK: CategoriesPickerView Methods
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int{
+        return 1
+    }
+    
+    // returns the # of rows in each component..
+    func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int{
+        return categories.count
+    }
+    
+    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String! {
+        return categories[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int)
+    {
+        selectCategoryBTN.titleLabel?.text = "\(categories[row])"
+        
     }
 }
