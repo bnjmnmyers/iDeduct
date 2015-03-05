@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7482BC7C-A767-4B99-9F29-2F1D97D1A142</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iDeduct</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BBCD1860BFC8E4AFD0C989FC25CE6F7906BC76AC</key>
+		<string>https://github.com/bnjmnmyers/iDeduct.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iDeduct.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BBCD1860BFC8E4AFD0C989FC25CE6F7906BC76AC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bnjmnmyers/iDeduct.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BBCD1860BFC8E4AFD0C989FC25CE6F7906BC76AC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BBCD1860BFC8E4AFD0C989FC25CE6F7906BC76AC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iDeduct</string>
+		</dict>
+	</array>
+</dict>
+</plist>

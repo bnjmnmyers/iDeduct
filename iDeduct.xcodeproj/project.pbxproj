@@ -426,6 +426,7 @@
 				52F603BD1A98D8F800435529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52F603BE1A98D8F800435529 /* Build configuration list for PBXNativeTarget "iDeductTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +435,7 @@
 				52F603C01A98D8F800435529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

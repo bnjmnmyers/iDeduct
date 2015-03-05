@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        
+        let navBarAppearance = UINavigationBar.appearance()
+        let titleDict:NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navBarAppearance.barTintColor = UIColor(red: 20/255, green: 129/255, blue: 209/255, alpha: 1)
+        navBarAppearance.titleTextAttributes = titleDict
+        navBarAppearance.tintColor = UIColor.whiteColor()
+        
         return true
     }
 
