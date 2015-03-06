@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		528DA3621AA9337F00075F95 /* Deduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DA3611AA9337F00075F95 /* Deduction.swift */; };
 		52F6039F1A98D8F800435529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6039E1A98D8F800435529 /* AppDelegate.swift */; };
 		52F603A21A98D8F800435529 /* iDeduct.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52F603A01A98D8F800435529 /* iDeduct.xcdatamodeld */; };
 		52F603A41A98D8F800435529 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F603A31A98D8F800435529 /* ViewController.swift */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		528DA3511AA8FE2E00075F95 /* iDeduct-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iDeduct-Bridging-Header.h"; sourceTree = "<group>"; };
+		528DA3611AA9337F00075F95 /* Deduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deduction.swift; sourceTree = "<group>"; };
 		52F603991A98D8F800435529 /* iDeduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDeduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F6039D1A98D8F800435529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52F6039E1A98D8F800435529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +65,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		528DA35F1AA91C9600075F95 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataModels;
+			sourceTree = "<group>";
+		};
 		52F603901A98D8F800435529 = {
 			isa = PBXGroup;
 			children = (
@@ -83,13 +93,16 @@
 		52F6039B1A98D8F800435529 /* iDeduct */ = {
 			isa = PBXGroup;
 			children = (
+				528DA35F1AA91C9600075F95 /* DataModels */,
 				52F603C11A99303400435529 /* Controllers */,
 				52F6039E1A98D8F800435529 /* AppDelegate.swift */,
-				52F603A51A98D8F800435529 /* Main.storyboard */,
-				52F603A81A98D8F800435529 /* Images.xcassets */,
-				52F603AA1A98D8F800435529 /* LaunchScreen.xib */,
 				52F603A01A98D8F800435529 /* iDeduct.xcdatamodeld */,
+				528DA3611AA9337F00075F95 /* Deduction.swift */,
+				52F603A51A98D8F800435529 /* Main.storyboard */,
+				52F603AA1A98D8F800435529 /* LaunchScreen.xib */,
+				52F603A81A98D8F800435529 /* Images.xcassets */,
 				52F6039C1A98D8F800435529 /* Supporting Files */,
+				528DA3511AA8FE2E00075F95 /* iDeduct-Bridging-Header.h */,
 			);
 			path = iDeduct;
 			sourceTree = "<group>";
@@ -231,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F603C91A9935ED00435529 /* NewDeductionViewController.swift in Sources */,
+				528DA3621AA9337F00075F95 /* Deduction.swift in Sources */,
 				52F603A41A98D8F800435529 /* ViewController.swift in Sources */,
 				52F603A21A98D8F800435529 /* iDeduct.xcdatamodeld in Sources */,
 				52F603C71A99334200435529 /* DeductionsViewController.swift in Sources */,
@@ -357,9 +371,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iDeduct/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iDeduct/iDeduct-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -367,9 +384,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iDeduct/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iDeduct/iDeduct-Bridging-Header.h";
 			};
 			name = Release;
 		};

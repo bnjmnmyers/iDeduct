@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class NewDeductionViewController: UIViewController, UITextFieldDelegate {
     
@@ -25,6 +26,11 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var categoryPicker: UIPickerView!
     @IBOutlet weak var categoryPickerDone: UIButton!
     
+    var deductions = [Deduction]()
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext!
+    
+    
     // Variable Properties
     //
     var currentTextField: UITextField!
@@ -34,6 +40,7 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
     //
     override func viewDidLoad() {
         // TODO: DO STUFF
+        self.title = "New Deduction"
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -72,6 +79,32 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func closeCategoryPicker(sender: AnyObject) {
         categoryPickerContainer.hidden = true
+    }
+    
+    @IBAction func saveDeduction(sender: AnyObject) {
+        
+        var appDell:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        var managedObjectContext:NSManagedObjectContext = appDell.managedObjectContext!
+        
+        var newDeduction = NSEntityDescription.insertNewObjectForEntityForName("Deduction", inManagedObjectContext: managedObjectContext) as Deduction
+        
+        let priceFormatter = NSNumberFormatter()
+        priceFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+        let price:NSNumber? = priceFormatter.numberFromString(priceTF.text)
+        
+        let dateStr = setDateBTN.titleLabel?.text
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM-dd-YYYY"
+        let date = dateFormatter.dateFromString(dateStr!)
+        
+        newDeduction.setValue(itemNameTF.text, forKey: "itemName")
+        newDeduction.setValue(price, forKey: "price")
+        newDeduction.setValue(selectCategoryBTN.titleLabel?.text, forKey: "category")
+        newDeduction.setValue(date, forKey: "purchaseDate")
+        
+        var error:NSError?
+        managedObjectContext.save(&error)
+    
     }
     
     // MARK: CategoriesPickerView Methods
