@@ -53,13 +53,34 @@ class DeductionsViewController: UIViewController, UITableViewDataSource {
         let cell:DeductionViewCell = tableView.dequeueReusableCellWithIdentifier("DeductionCell") as DeductionViewCell
         let deduction = deductions[indexPath.row]
         let deductionPrice = deduction.valueForKey("price")?.stringValue
-        let deductionDate = deduction.valueForKey("purchaseDate") as? String
-        println(deductionDate);
-        cell.deductionDate?.text = deduction.valueForKey("purchaseDate") as? String
+        let deductionDate = deduction.valueForKey("purchaseDate")? as NSDate
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM-dd-YYYY"
+        cell.deductionDate?.text = dateFormatter.stringFromDate(deductionDate)
         cell.deductionName?.text = deduction.valueForKey("itemName") as? String
         cell.deductionPrice?.text = "$"+deductionPrice!
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            var appDell:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            var managedObjectContext:NSManagedObjectContext = appDell.managedObjectContext!
+            managedObjectContext.deleteObject(deductions[indexPath.row] as NSManagedObject)
+            deductions.removeAtIndex(indexPath.row)
+            managedObjectContext.save(nil)
+            
+            //tableView.reloadData()
+            // remove the deleted item from the `UITableView`
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+
+        }
     }
 
 }
