@@ -110,7 +110,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Macbook Pro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ako-80-iLm">
-                                                    <rect key="frame" x="8" y="27" width="463" height="21"/>
+                                                    <rect key="frame" x="8" y="27" width="104" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.062745098039215685" green="0.50588235294117645" blue="0.81960784313725488" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -144,7 +144,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Ako-80-iLm" firstAttribute="leading" secondItem="LbP-Xn-c6r" secondAttribute="leading" constant="8" id="7gQ-dN-afn"/>
-                                                <constraint firstItem="Ako-80-iLm" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ev2-xZ-4mD" secondAttribute="leading" constant="-8" id="M1X-NI-ELS"/>
+                                                <constraint firstItem="Ako-80-iLm" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ev2-xZ-4mD" secondAttribute="leading" constant="-8" id="M1X-NI-ELS"/>
                                                 <constraint firstAttribute="trailing" secondItem="ev2-xZ-4mD" secondAttribute="trailing" id="f5Z-vi-b8p"/>
                                                 <constraint firstItem="Ako-80-iLm" firstAttribute="top" secondItem="LbP-Xn-c6r" secondAttribute="top" constant="27" id="i8D-Hm-hgu"/>
                                                 <constraint firstItem="ev2-xZ-4mD" firstAttribute="top" secondItem="LbP-Xn-c6r" secondAttribute="top" constant="8" id="qVh-cC-eAo"/>
