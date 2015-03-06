@@ -53,7 +53,28 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
             currentTextField.endEditing(true)
         }
     }
-    
+	
+	// MARK: CategoriesPickerView Methods
+	
+	func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int{
+		return 1
+	}
+	
+	// returns the # of rows in each component..
+	func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int{
+		return categories.count
+	}
+	
+	func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String! {
+		return categories[row]
+	}
+	
+	func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int)
+	{
+		selectCategoryBTN.titleLabel?.text = "\(categories[row])"
+		
+	}
+	
     @IBAction func setDate(sender: AnyObject) {
         datePickerContainer.hidden = false
         if currentTextField != nil{
@@ -93,11 +114,13 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
         
         let dateStr = setDateBTN.titleLabel?.text
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MM-dd-YYYY"
-        let date = dateFormatter.dateFromString(dateStr!)
-        println("dateStr\(dateStr!)")
-        println(date!)
-        newDeduction.setValue(itemNameTF.text, forKey: "itemName")
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+		let date:NSDate = dateFormatter.dateFromString(dateStr!)!
+		
+		println("dateStr\(dateStr!)")
+        println(date)
+		
+		newDeduction.setValue(itemNameTF.text, forKey: "itemName")
         newDeduction.setValue(price, forKey: "price")
         newDeduction.setValue(selectCategoryBTN.titleLabel?.text, forKey: "category")
         newDeduction.setValue(date, forKey: "purchaseDate")
@@ -105,26 +128,5 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
         var error:NSError?
         managedObjectContext.save(&error)
     
-    }
-    
-    // MARK: CategoriesPickerView Methods
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int{
-        return 1
-    }
-    
-    // returns the # of rows in each component..
-    func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int{
-        return categories.count
-    }
-    
-    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String! {
-        return categories[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int)
-    {
-        selectCategoryBTN.titleLabel?.text = "\(categories[row])"
-        
     }
 }
