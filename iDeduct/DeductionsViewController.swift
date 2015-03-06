@@ -43,8 +43,8 @@ class DeductionsViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidAppear(animated: Bool) {
         self.tableView.reloadData()
-    }
-    
+	}
+	
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return deductions.count
     }

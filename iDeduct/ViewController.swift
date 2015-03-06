@@ -7,16 +7,32 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var deductionsTotalLBL: UILabel!
-    
+	var deductionTotal:NSDecimalNumber! = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+		var appDell:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+		var managedObjectContext:NSManagedObjectContext = appDell.managedObjectContext!
+		
+		var fetchRequest = NSFetchRequest(entityName: "Deduction")
+		fetchRequest.returnsObjectsAsFaults = false
+		
+		var error:NSError?
+		if let results = managedObjectContext.executeFetchRequest(fetchRequest, error: &error) as? [Deduction]{
+			for result in results as [Deduction]{
+				deductionTotal = deductionTotal.decimalNumberByAdding(result.price)
+				
+			}
+		}
+		var deductionTotalString = deductionTotal.stringValue
+		deductionsTotalLBL.text = "$\(deductionTotalString)"
     }
-    
+	
     override func viewWillAppear(animated: Bool) {
         sizeElements()
     }

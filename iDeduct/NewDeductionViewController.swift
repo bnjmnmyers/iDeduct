@@ -41,8 +41,8 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         // TODO: DO STUFF
         self.title = "New Deduction"
-    }
-    
+	}
+	
     func textFieldDidBeginEditing(textField: UITextField) {
         currentTextField = textField
         datePickerContainer.hidden = true

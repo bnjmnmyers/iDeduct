@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let navBarAppearance = UINavigationBar.appearance()
         let titleDict:NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        navBarAppearance.barTintColor = UIColor(red: 20/255, green: 129/255, blue: 209/255, alpha: 1)
+        navBarAppearance.barTintColor = UIColor(red: 16/255.0, green: 129/255.0, blue: 209/255.0, alpha: 1)
         navBarAppearance.titleTextAttributes = titleDict
         navBarAppearance.tintColor = UIColor.whiteColor()
         
