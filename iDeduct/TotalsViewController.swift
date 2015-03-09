@@ -9,10 +9,10 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class TotalsViewController: UIViewController {
 
     @IBOutlet weak var deductionsTotalLBL: UILabel!
-	var deductionTotal:NSDecimalNumber! = 0.0
+	var deductionTotal:NSDecimalNumber! = 0.00
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,11 +26,12 @@ class ViewController: UIViewController {
 		if let results = managedObjectContext.executeFetchRequest(fetchRequest, error: &error) as? [Deduction]{
 			for result in results as [Deduction]{
 				deductionTotal = deductionTotal.decimalNumberByAdding(result.price)
-				
 			}
 		}
-		var deductionTotalString = deductionTotal.stringValue
-		deductionsTotalLBL.text = "$\(deductionTotalString)"
+        var numberFormatter = NSNumberFormatter()
+        numberFormatter.numberStyle = .CurrencyStyle
+        var deductionTotalString = numberFormatter.stringFromNumber(deductionTotal)!
+		deductionsTotalLBL.text = deductionTotalString
     }
 	
     override func viewWillAppear(animated: Bool) {
@@ -52,7 +53,7 @@ class ViewController: UIViewController {
             deductionsTotalLBL.font = UIFont(name: deductionsTotalLBL.font.fontName, size: 84)
             println()
         default:
-            deductionsTotalLBL.font = UIFont(name: deductionsTotalLBL.font.fontName, size: 96)
+            deductionsTotalLBL.font = UIFont(name: deductionsTotalLBL.font.fontName, size: 92)
             println()
         }
     }

@@ -21,6 +21,7 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var priceTF: UITextField!
     @IBOutlet weak var setDateBTN: UIButton!
     @IBOutlet weak var selectCategoryBTN: UIButton!
+    @IBOutlet weak var dateLBL: UILabel!
     
     @IBOutlet weak var categoryPickerContainer: UIView!
     @IBOutlet weak var categoryPicker: UIPickerView!
@@ -41,6 +42,13 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         // TODO: DO STUFF
         self.title = "New Deduction"
+        
+        var todaysDate:NSDate = NSDate()
+        var dateFormatter:NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        var dateStr:String = dateFormatter.stringFromDate(todaysDate)
+        
+        dateLBL.text = dateStr
 	}
 	
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -77,6 +85,9 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
 	
     @IBAction func setDate(sender: AnyObject) {
         datePickerContainer.hidden = false
+        if categoryPickerContainer.hidden == false {
+            categoryPickerContainer.hidden = true
+        }
         if currentTextField != nil{
             currentTextField.endEditing(true)
         }
@@ -84,6 +95,9 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func selectCategory(sender: AnyObject) {
         categoryPickerContainer.hidden = false
+        if datePickerContainer.hidden == false {
+            datePickerContainer.hidden = true
+        }
         if currentTextField != nil{
             currentTextField.endEditing(true)
         }
@@ -94,7 +108,7 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
         var dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MM-dd-YYYY"
         var stringDate = dateFormatter.stringFromDate(datePicker.date)
-        setDateBTN.titleLabel?.text = stringDate
+        dateLBL.text = stringDate
     }
     
     @IBAction func closeCategoryPicker(sender: AnyObject) {
@@ -112,7 +126,7 @@ class NewDeductionViewController: UIViewController, UITextFieldDelegate {
         priceFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
         let price:NSNumber? = priceFormatter.numberFromString(priceTF.text)
         
-        let dateStr = setDateBTN.titleLabel?.text
+        let dateStr = dateLBL.text
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy"
 		let date:NSDate = dateFormatter.dateFromString(dateStr!)!

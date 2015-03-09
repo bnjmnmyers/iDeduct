@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		528DA3621AA9337F00075F95 /* Deduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DA3611AA9337F00075F95 /* Deduction.swift */; };
+		52A63D3F1AACD368002AAD27 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A63D3E1AACD368002AAD27 /* MenuViewController.swift */; };
 		52F6039F1A98D8F800435529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6039E1A98D8F800435529 /* AppDelegate.swift */; };
 		52F603A21A98D8F800435529 /* iDeduct.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52F603A01A98D8F800435529 /* iDeduct.xcdatamodeld */; };
-		52F603A41A98D8F800435529 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F603A31A98D8F800435529 /* ViewController.swift */; };
+		52F603A41A98D8F800435529 /* TotalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F603A31A98D8F800435529 /* TotalsViewController.swift */; };
 		52F603A71A98D8F800435529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F603A51A98D8F800435529 /* Main.storyboard */; };
 		52F603A91A98D8F800435529 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F603A81A98D8F800435529 /* Images.xcassets */; };
 		52F603AC1A98D8F800435529 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F603AA1A98D8F800435529 /* LaunchScreen.xib */; };
@@ -32,11 +33,12 @@
 /* Begin PBXFileReference section */
 		528DA3511AA8FE2E00075F95 /* iDeduct-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iDeduct-Bridging-Header.h"; sourceTree = "<group>"; };
 		528DA3611AA9337F00075F95 /* Deduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deduction.swift; sourceTree = "<group>"; };
+		52A63D3E1AACD368002AAD27 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		52F603991A98D8F800435529 /* iDeduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDeduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F6039D1A98D8F800435529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52F6039E1A98D8F800435529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52F603A11A98D8F800435529 /* iDeduct.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iDeduct.xcdatamodel; sourceTree = "<group>"; };
-		52F603A31A98D8F800435529 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52F603A31A98D8F800435529 /* TotalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsViewController.swift; sourceTree = "<group>"; };
 		52F603A61A98D8F800435529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52F603A81A98D8F800435529 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		52F603AB1A98D8F800435529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -135,9 +137,10 @@
 		52F603C11A99303400435529 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				52F603A31A98D8F800435529 /* ViewController.swift */,
+				52F603A31A98D8F800435529 /* TotalsViewController.swift */,
 				52F603C61A99334200435529 /* DeductionsViewController.swift */,
 				52F603C81A9935ED00435529 /* NewDeductionViewController.swift */,
+				52A63D3E1AACD368002AAD27 /* MenuViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -245,7 +248,8 @@
 			files = (
 				52F603C91A9935ED00435529 /* NewDeductionViewController.swift in Sources */,
 				528DA3621AA9337F00075F95 /* Deduction.swift in Sources */,
-				52F603A41A98D8F800435529 /* ViewController.swift in Sources */,
+				52F603A41A98D8F800435529 /* TotalsViewController.swift in Sources */,
+				52A63D3F1AACD368002AAD27 /* MenuViewController.swift in Sources */,
 				52F603A21A98D8F800435529 /* iDeduct.xcdatamodeld in Sources */,
 				52F603C71A99334200435529 /* DeductionsViewController.swift in Sources */,
 				52F6039F1A98D8F800435529 /* AppDelegate.swift in Sources */,
