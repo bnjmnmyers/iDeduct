@@ -48,12 +48,12 @@ class TotalsViewController: UIViewController {
         let screenHeight = screenSize.height
         switch screenWidth {
         case 320:
-            deductionsTotalLBL.font = UIFont(name: deductionsTotalLBL.font.fontName, size: 70)
+            deductionsTotalLBL.font = UIFont(name: deductionsTotalLBL.font.fontName, size: 60)
         case 375:
-            deductionsTotalLBL.font = UIFont(name: deductionsTotalLBL.font.fontName, size: 84)
+            deductionsTotalLBL.font = UIFont(name: deductionsTotalLBL.font.fontName, size: 70)
             println()
         default:
-            deductionsTotalLBL.font = UIFont(name: deductionsTotalLBL.font.fontName, size: 92)
+            deductionsTotalLBL.font = UIFont(name: deductionsTotalLBL.font.fontName, size: 78)
             println()
         }
     }
@@ -62,8 +62,6 @@ class TotalsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-
+	
 }
 

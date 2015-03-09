@@ -52,13 +52,15 @@ class DeductionsViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:DeductionViewCell = tableView.dequeueReusableCellWithIdentifier("DeductionCell") as DeductionViewCell
         let deduction = deductions[indexPath.row]
-        let deductionPrice = deduction.valueForKey("price")?.stringValue
+        let deductionPrice = deduction.valueForKey("price") as NSDecimalNumber
         let deductionDate = deduction.valueForKey("purchaseDate")? as NSDate
         let dateFormatter = NSDateFormatter()
+		let numberFormatter = NSNumberFormatter()
+		numberFormatter.numberStyle = .CurrencyStyle
         dateFormatter.dateFormat = "MM-dd-YYYY"
         cell.deductionDate?.text = dateFormatter.stringFromDate(deductionDate)
         cell.deductionName?.text = deduction.valueForKey("itemName") as? String
-        cell.deductionPrice?.text = "$"+deductionPrice!
+        cell.deductionPrice?.text = numberFormatter.stringFromNumber(deductionPrice)
         
         return cell
     }
